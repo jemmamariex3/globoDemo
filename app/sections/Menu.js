@@ -11,16 +11,17 @@ export class Menu extends React.Component {
         return(
             <View style={styles.container}>
                 <View style={styles.buttonRow}>
-                    <TouchableOpacity style={styles.buttonStyles} onPress={this.onPress}>
+                    <TouchableOpacity style={styles.buttonStyles} onPress={()=>this.props.navigate('LessonsRT')}>
                         <Text style={styles.buttonText}>LESSONS</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.buttonStyles} onPress={this.onPress}>
+                    <TouchableOpacity style={styles.buttonStyles} onPress={()=>this.props.navigate('RegisterRT')}>
                         <Text style={styles.buttonText}>REGISTER</Text>
                     </TouchableOpacity>
                 </View>
 
                 <View style={styles.buttonRow}>
                     <TouchableOpacity style={styles.buttonStyles} onPress={this.onPress}>
+                    {/*<TouchableOpacity style={styles.buttonStyles} onPress={()=>this.props.navigate('BlogRT')}>*/}
                         <Text style={styles.buttonText}>BLOG</Text>
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.buttonStyles} onPress={()=>this.props.navigate('ContactRT')}>
@@ -29,10 +30,10 @@ export class Menu extends React.Component {
                 </View>
 
                 <View style={styles.buttonRow}>
-                    <TouchableOpacity style={styles.buttonStyles} onPress={this.onPress}>
+                    <TouchableOpacity style={styles.buttonStyles} onPress={()=>this.props.navigate('QuizRT')}>
                         <Text style={styles.buttonText}>QUIZ</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.buttonStyles} onPress={this.onPress}>
+                    <TouchableOpacity style={styles.buttonStyles} onPress={()=>this.props.navigate('AboutRT')}>
                         <Text style={styles.buttonText}>ABOUT</Text>
                     </TouchableOpacity>
                 </View>
